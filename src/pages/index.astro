@@ -8,7 +8,7 @@ import Layout from '../layouts/Base.astro';
   <!-- HERO with background image -->
   <section class="relative">
     <div class="relative h-[60vh] md:h-[70vh]">
-      <!-- Fill the section with your image -->
+      <!-- Full-bleed hero image -->
       <img
         src="/hero.jpg"
         alt="Carer and children completing a colourful jigsaw puzzle together"
@@ -16,29 +16,31 @@ import Layout from '../layouts/Base.astro';
         loading="eager"
         fetchpriority="high"
       />
-      <!-- Dark overlay for readable text -->
+      <!-- Subtle overlay for readable text -->
       <div class="absolute inset-0 bg-black/40"></div>
 
-      <!-- Text content on top -->
-      <div class="relative z-10 max-w-6xl mx-auto px-4 h-full flex items-center">
-        <div class="text-white">
+      <!-- Centered content -->
+      <div class="relative z-10 max-w-6xl mx-auto px-4 h-full flex items-center justify-center">
+        <div class="text-white text-center md:text-left max-w-3xl">
           <h1 class="text-4xl md:text-6xl font-bold leading-tight">
             Compassionate, outcomes-focused residential care
           </h1>
-          <p class="mt-6 text-lg md:text-xl max-w-2xl">
+          <p class="mt-6 text-lg md:text-xl mx-auto md:mx-0">
             We provide safe, nurturing homes with tailored support plans,
             helping young people grow, learn, and thrive.
           </p>
-          <div class="mt-8 flex gap-4">
+
+          <!-- Centered CTA buttons -->
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="/contact"
-              class="px-6 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+              class="w-full sm:w-auto text-center px-6 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
             >
               Refer / Contact us
             </a>
             <a
               href="/our-homes"
-              class="px-6 py-3 rounded-lg border border-[#5f7c7b] text-[#5f7c7b] font-semibold hover:bg-[#eef5f4] bg-white/90"
+              class="w-full sm:w-auto text-center px-6 py-3 rounded-lg border border-[#5f7c7b] text-[#5f7c7b] font-semibold hover:bg-[#eef5f4] bg-white/90"
             >
               Explore our homes
             </a>
@@ -47,6 +49,4 @@ import Layout from '../layouts/Base.astro';
       </div>
     </div>
   </section>
-
-  <!-- (Optional) You can keep more content sections below if you like -->
 </Layout>
