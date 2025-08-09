@@ -18,17 +18,19 @@ import Layout from '../layouts/Base.astro';
       <div class="absolute inset-0 bg-black/40"></div>
 
       <div class="relative z-10 max-w-6xl mx-auto px-4 h-full flex items-center justify-center">
-        <div class="text-white text-center md:text-left max-w-3xl">
-          <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+        <!-- Option B: centered on all screens -->
+        <div class="text-white text-center max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight">
             Growth. Development. Success.
           </h1>
-          <p class="mt-6 text-lg md:text-xl mx-auto md:mx-0">
+
+          <p class="mt-6 text-lg md:text-xl mx-auto max-w-3xl">
             We provide safe, nurturing homes with tailored support plans,
             helping young people grow, learn, and thrive.
           </p>
 
           <!-- Centered CTA buttons -->
-          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               class="w-full sm:w-auto text-center px-6 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
@@ -84,7 +86,7 @@ import Layout from '../layouts/Base.astro';
           </summary>
           <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
-              Our promise: This is a home; children are known, accepted, and cared for as individuals.
+              Our promise: This is a home—children are known, accepted, and cared for as individuals.
             </p>
             <ul class="list-disc pl-5 space-y-1">
               <li>Stable relationships and a family-style atmosphere.</li>
@@ -144,7 +146,7 @@ import Layout from '../layouts/Base.astro';
         <!-- Left: image -->
         <div>
           <img
-            src="/logo.jpg"
+            src="/mission.jpg"
             alt="Inguz Care — growth, development, success"
             class="w-full rounded-xl shadow object-cover"
             loading="lazy"
