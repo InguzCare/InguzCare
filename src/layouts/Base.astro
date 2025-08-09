@@ -29,10 +29,11 @@ const {
     <link rel="icon" href="/logo.jpg" />
   </head>
   <body class="min-h-screen bg-white text-slate-900">
+    <!-- Header -->
     <header class="border-b">
       <!-- Stack on mobile; row on md+ -->
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <!-- Brand: logo with name UNDERNEATH on mobile -->
+        <!-- Brand: logo with name UNDER on mobile -->
         <a href="/" class="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-3">
           <img src="/logo.jpg" alt="Inguz Care logo" class="h-10 w-10 rounded-md object-cover" />
           <span class="font-semibold text-base sm:text-lg leading-tight">Inguz Care</span>
@@ -53,13 +54,61 @@ const {
       </div>
     </header>
 
+    <!-- Page content -->
     <main>
       <slot />
     </main>
 
-    <footer class="border-t">
-      <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-600">
-        © {new Date().getFullYear()} Inguz Care. All rights reserved.
+    <!-- Footer -->
+    <footer class="border-t bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <!-- Column 1: Logo + blurb -->
+        <div>
+          <a href="/" class="flex items-center gap-3">
+            <img src="/logo.jpg" alt="Inguz Care logo" class="h-10 w-10 rounded-md object-cover" />
+            <span class="font-semibold">Inguz Care</span>
+          </a>
+          <p class="mt-3 text-sm text-slate-600">
+            Nurturing, stable homes where children and young people can feel safe, settle and thrive.
+          </p>
+        </div>
+
+        <!-- Column 2: Site -->
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900">Site</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a></li>
+            <li><a class="hover:text-[#5f7c7b]" href="/services">Services</a></li>
+            <li><a class="hover:text-[#5f7c7b]" href="/about">About</a></li>
+            <li><a class="hover:text-[#5f7c7b]" href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900">Legal</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:text-[#5f7c7b]" href="/privacy">Privacy Policy</a></li>
+            <li><a class="hover:text-[#5f7c7b]" href="/terms">Terms &amp; Conditions</a></li>
+            <li><a class="hover:text-[#5f7c7b]" href="/cookies">Cookies</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div>
+          <h3 class="text-sm font-semibold text-slate-900">Contact</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li>Email: <a class="hover:text-[#5f7c7b]" href="mailto:hello@inguzcare.co.uk">hello@inguzcare.co.uk</a></li>
+            <li>Phone: <a class="hover:text-[#5f7c7b]" href="tel:01234567890">01234 567 890</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-xs text-slate-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <p>© {new Date().getFullYear()} Inguz Care. All rights reserved.</p>
+          <p>Registered in England &amp; Wales.</p>
+        </div>
       </div>
     </footer>
   </body>
