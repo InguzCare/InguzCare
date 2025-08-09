@@ -1,9 +1,133 @@
 ---
 import Layout from '../../layouts/Base.astro';
 ---
-<Layout title="About — Inguz Care">
+<Layout
+  title="About Inguz Care"
+  description="Small, nurturing homes with trauma-informed, relationship-based care."
+>
   <section class="max-w-6xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold">About Us</h1>
-    <p class="mt-4">Your mission, values, model of care, and leadership.</p>
+    <h1 class="text-3xl md:text-4xl font-bold">About Inguz Care</h1>
+    <p class="mt-4 text-lg max-w-3xl">
+      Inguz Care provides small, nurturing homes for children and young people who need safety,
+      stability and a trusted team around them. We combine calm, homely environments with skilled,
+      trauma-informed care so children can feel settled, learn, and thrive.
+    </p>
+
+    <!-- Our purpose -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Our purpose</h2>
+      <p class="mt-3 max-w-3xl">
+        To offer the kind of everyday life every child deserves: somewhere warm and predictable,
+        with adults who listen, notice the small things, and champion each child’s strengths—every single day.
+      </p>
+    </div>
+
+    <!-- Why Inguz -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Why “Inguz”?</h2>
+      <p class="mt-3 max-w-3xl">
+        The name is inspired by a symbol often linked to new beginnings and growth. It reflects our belief that—with
+        the right relationships and routines—children can make real, lasting progress.
+      </p>
+    </div>
+
+    <!-- How we care -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">How we care</h2>
+
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Relationship-based, trauma-informed practice</h3>
+          <p class="mt-2">
+            Safety, connection and consistency come first. We use calm, predictable responses and
+            focus on regulation before expectation.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Individual plans that grow with the child</h3>
+          <p class="mt-2">
+            Goals are co-created with the child and their network, reviewed regularly, and celebrated—no matter how small the step.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Education, health and wellbeing together</h3>
+          <p class="mt-2">
+            We work closely with schools, health partners and community services so support feels joined-up and practical.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Everyday life that builds confidence</h3>
+          <p class="mt-2">
+            Shared meals, routines, hobbies, outdoor time and community links—ordinary experiences
+            that make an extraordinary difference.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border p-6 md:col-span-2">
+          <h3 class="text-lg font-semibold">Family and identity</h3>
+          <p class="mt-2">
+            We support safe, meaningful family contact and honour each child’s culture, beliefs and preferences.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <!-- Our values -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Our values</h2>
+      <p class="mt-3 max-w-3xl">
+        <span class="font-medium">Warmth.</span> <span class="font-medium">Safety.</span>
+        <span class="font-medium">Respect.</span> <span class="font-medium">Voice.</span>
+        <span class="font-medium">Curiosity.</span> <span class="font-medium">Reliability.</span>
+        These values guide how we recruit, train and make decisions—and how children and families experience our homes.
+      </p>
+    </div>
+
+    <!-- Our team -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Our team</h2>
+      <p class="mt-3 max-w-3xl">
+        Children meet a consistent team who are carefully selected and well-trained. Staff receive ongoing supervision
+        and development in safeguarding, attachment and de-escalation, alongside first aid and practical skills.
+        We reflect, learn and improve together so our care stays steady and child-centred.
+      </p>
+    </div>
+
+    <!-- Safeguarding & quality -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Safeguarding &amp; quality</h2>
+      <p class="mt-3 max-w-3xl">
+        Children’s safety is our highest priority. We follow robust safeguarding procedures, clear risk management
+        and strong recording. We welcome external oversight and use feedback and outcomes data to keep improving.
+        Our Statement of Purpose sets out exactly what we offer and how we work.
+      </p>
+    </div>
+
+    <!-- Working together -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Working together</h2>
+      <p class="mt-3 max-w-3xl">
+        Good care is a team effort. We communicate clearly with families, local authorities, schools and health
+        professionals, and we keep everyone focused on what matters most to the child. You can expect timely updates,
+        honest conversations and thoughtful planning for transitions.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-12 rounded-xl bg-[#eef5f4] p-6">
+      <h3 class="text-lg font-semibold">Want to know more?</h3>
+      <p class="mt-2">
+        To request our Statement of Purpose or discuss a placement, please get in touch.
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-5 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+      >
+        Contact us
+      </a>
+    </div>
   </section>
 </Layout>
