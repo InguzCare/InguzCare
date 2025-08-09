@@ -5,27 +5,48 @@ import Layout from '../layouts/Base.astro';
   title="Inguz Care — Residential Children’s Homes"
   description="Safe, nurturing homes with tailored support plans."
 >
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-      Compassionate, outcomes-focused residential care
-    </h1>
-    <p class="mt-6 text-lg md:text-xl max-w-2xl">
-      We provide safe, nurturing homes with tailored support plans,
-      helping young people grow, learn, and thrive.
-    </p>
-    <div class="mt-8 flex gap-4">
-      <a
-        href="/contact"
-        class="px-6 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
-      >
-        Refer / Contact us
-      </a>
-      <a
-        href="/our-homes"
-        class="px-6 py-3 rounded-lg border border-[#5f7c7b] text-[#5f7c7b] font-semibold hover:bg-[#eef5f4]"
-      >
-        Explore our homes
-      </a>
+  <!-- HERO with background image -->
+  <section class="relative">
+    <div class="relative h-[60vh] md:h-[70vh]">
+      <!-- Fill the section with your image -->
+      <img
+        src="/hero.jpg"
+        alt="Carer and children completing a colourful jigsaw puzzle together"
+        class="absolute inset-0 h-full w-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <!-- Dark overlay for readable text -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Text content on top -->
+      <div class="relative z-10 max-w-6xl mx-auto px-4 h-full flex items-center">
+        <div class="text-white">
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+            Compassionate, outcomes-focused residential care
+          </h1>
+          <p class="mt-6 text-lg md:text-xl max-w-2xl">
+            We provide safe, nurturing homes with tailored support plans,
+            helping young people grow, learn, and thrive.
+          </p>
+          <div class="mt-8 flex gap-4">
+            <a
+              href="/contact"
+              class="px-6 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+            >
+              Refer / Contact us
+            </a>
+            <a
+              href="/our-homes"
+              class="px-6 py-3 rounded-lg border border-[#5f7c7b] text-[#5f7c7b] font-semibold hover:bg-[#eef5f4] bg-white/90"
+            >
+              Explore our homes
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- (Optional) You can keep more content sections below if you like -->
 </Layout>
