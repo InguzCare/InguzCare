@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+
+/** Pass a page title/description from each page */
+const { title = "Inguz Care", description = "High-quality residential care for children and young people." } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen bg-white text-slate-900">
+    <header class="border-b">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="font-bold text-xl">Inguz Care</a>
+        <nav class="space-x-6">
+          <a class="hover:underline" href="/our-homes">Our Homes</a>
+          <a class="hover:underline" href="/services">Services</a>
+          <a class="hover:underline" href="/about">About</a>
+          <a class="hover:underline" href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />  {/* page-specific content appears here */}
+    </main>
+
+    <footer class="border-t">
+      <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-600">
+        © {new Date().getFullYear()} Inguz Care. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
