@@ -56,7 +56,7 @@ import Layout from '../layouts/Base.astro';
       <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         <!-- 1) Safety First -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b] [&::-webkit-details-marker]:hidden">
+          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]">
             <div class="aspect-square grid place-items-center text-center bg-[#5f7c7b] text-white px-3">
               <h3 class="text-base md:text-lg font-semibold leading-tight">Safety First</h3>
               <span class="sr-only">(tap to expand)</span>
@@ -76,7 +76,7 @@ import Layout from '../layouts/Base.astro';
 
         <!-- 2) Belonging & Warmth -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6f908f] [&::-webkit-details-marker]:hidden">
+          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6f908f]">
             <div class="aspect-square grid place-items-center text-center bg-[#6f908f] text-white px-3">
               <h3 class="text-base md:text-lg font-semibold leading-tight">Belonging &amp; Warmth</h3>
               <span class="sr-only">(tap to expand)</span>
@@ -96,7 +96,7 @@ import Layout from '../layouts/Base.astro';
 
         <!-- 3) Voice & Choice -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#3d5756] [&::-webkit-details-marker]:hidden">
+          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#3d5756]">
             <div class="aspect-square grid place-items-center text-center bg-[#3d5756] text-white px-3">
               <h3 class="text-base md:text-lg font-semibold leading-tight">Voice &amp; Choice</h3>
               <span class="sr-only">(tap to expand)</span>
@@ -116,7 +116,7 @@ import Layout from '../layouts/Base.astro';
 
         <!-- 4) Growth for Life -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#88a7a6] [&::-webkit-details-marker]:hidden">
+          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#88a7a6]">
             <div class="aspect-square grid place-items-center text-center bg-[#88a7a6] text-white px-3">
               <h3 class="text-base md:text-lg font-semibold leading-tight">Growth for Life</h3>
               <span class="sr-only">(tap to expand)</span>
@@ -133,6 +133,34 @@ import Layout from '../layouts/Base.astro';
             </ul>
           </div>
         </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION STATEMENT -->
+  <section id="mission" class="py-14 bg-[#eef5f4]">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Left: image -->
+        <div>
+          <img
+            src="/mission.jpg"
+            alt="Inguz Care — growth, development, success"
+            class="w-full rounded-xl shadow object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right: text (vertically centered) -->
+        <div class="text-slate-900 md:pl-4">
+          <h2 class="text-3xl md:text-4xl font-bold">Mission Statement</h2>
+          <p class="mt-4 text-lg leading-relaxed">
+            At Inguz Care, our mission is to provide a safe, nurturing home where young people are known as individuals
+            and supported to thrive. With a broad, multi-disciplinary team and strong partners around us, we tailor
+            trauma-informed, relationship-based support so every voice is heard, identity is celebrated, and the skills
+            for independence grow day by day.
+          </p>
+        </div>
       </div>
     </div>
   </section>
