@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';   // <-- this line turns Tailwind on
+const title = "Your Company Name";
+const tagline = "High-quality residential care for children and young people.";
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white text-slate-900">
+    <header class="border-b">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="font-bold text-xl">{title}</a>
+        <nav class="space-x-6">
+          <a class="hover:underline" href="/our-homes">Our Homes</a>
+          <a class="hover:underline" href="/services">Services</a>
+          <a class="hover:underline" href="/about">About</a>
+          <a class="hover:underline" href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="max-w-6xl mx-auto px-4 py-16">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+          Compassionate, outcomes-focused residential care
+        </h1>
+        <p class="mt-6 text-lg md:text-xl max-w-2xl">
+          We provide safe, nurturing homes with tailored support plans,
+          helping young people grow, learn, and thrive.
+        </p>
+        <div class="mt-8 flex gap-4">
+          <a href="/contact" class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold">
+            Refer / Contact us
+          </a>
+          <a href="/our-homes" class="px-6 py-3 rounded-lg border font-semibold">
+            Explore our homes
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t">
+      <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-600">
+        © {new Date().getFullYear()} {title}. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>

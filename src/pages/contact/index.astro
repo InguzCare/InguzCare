@@ -1,0 +1,17 @@
+---
+import '../../styles/global.css';
+---
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Contact</title></head>
+  <body class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold">Contact</h1>
+    <p class="mt-4">Phone: 01234 567890 · Email: hello@yourdomain.com</p>
+
+    <form class="mt-8 max-w-xl space-y-4" method="post" action="#">
+      <input class="w-full border rounded-lg p-3" name="name" placeholder="Your name" required />
+      <input class="w-full border rounded-lg p-3" name="email" placeholder="Email" type="email" required />
+      <textarea class="w-full border rounded-lg p-3" name="message" placeholder="How can we help?" rows="5" required></textarea>
+      <button class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold">Send</button>
+    </form>
+  </body>
+</html>
