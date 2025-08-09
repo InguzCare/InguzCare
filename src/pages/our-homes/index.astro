@@ -1,24 +1,78 @@
 ---
 import Layout from '../../layouts/Base.astro';
 ---
-<Layout title="Our Homes — Inguz Care">
+<Layout
+  title="Our Homes — Inguz Care"
+  description="Small, welcoming homes rooted in their communities."
+>
   <section class="max-w-6xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold">Our Homes</h1>
-    <p class="mt-4">We operate safe, nurturing homes across Manchester.</p>
+    <h1 class="text-3xl md:text-4xl font-bold">Our Homes</h1>
+    <p class="mt-4 text-lg max-w-3xl">
+      At Inguz Care, our homes are small, welcoming and rooted in their local communities.
+      We design every space to feel calm, comfortable and truly homely—somewhere you can
+      settle, belong and thrive.
+    </p>
 
-    <div class="grid md:grid-cols-3 gap-6 mt-8">
-      <article class="border rounded-xl p-4">
-        <h2 class="font-semibold">Home Name, Town</h2>
-        <p class="text-sm mt-2">Short description and specialisms.</p>
-      </article>
-      <article class="border rounded-xl p-4">
-        <h2 class="font-semibold">Home Name, Town</h2>
-        <p class="text-sm mt-2">Short description and specialisms.</p>
-      </article>
-      <article class="border rounded-xl p-4">
-        <h2 class="font-semibold">Home Name, Town</h2>
-        <p class="text-sm mt-2">Short description and specialisms.</p>
-      </article>
-    </div>
+    <article class="mt-10 rounded-2xl border p-6 md:p-8">
+      <header class="flex flex-wrap items-center gap-3">
+        <h2 class="text-2xl font-semibold">Radcliffe, Manchester</h2>
+        <span class="inline-flex items-center rounded-full bg-[#eef5f4] text-[#3d5756] px-3 py-1 text-sm font-semibold">
+          Opening soon
+        </span>
+      </header>
+
+      <p class="mt-4">
+        Our first home is opening in Radcliffe, Greater Manchester, in the coming months.
+        Set in a friendly neighbourhood with easy access to local shops, green spaces and
+        transport links, it’s a place where everyday life feels simple and supported.
+      </p>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold">Home highlights</h3>
+          <ul class="mt-3 list-disc pl-6 space-y-2">
+            <li>Warm, comfortable bedrooms with room to personalise</li>
+            <li>Bright shared spaces for meals, activities and relaxing</li>
+            <li>A cosy lounge and homely kitchen at the heart of the house</li>
+            <li>Outdoor space for fresh air and time in the garden</li>
+            <li>Designed with safety, comfort and accessibility in mind</li>
+            <li>Located close to local amenities and community activities</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold">What you can expect</h3>
+          <ul class="mt-3 list-disc pl-6 space-y-2">
+            <li>A calm, respectful environment where people feel at home</li>
+            <li>Person-centred support built around individual goals and preferences</li>
+            <li>Consistent routines, clear communication and gentle structure</li>
+            <li>Strong links with the local community to encourage connection and independence</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-xl bg-[#eef5f4] p-6">
+        <h3 class="text-lg font-semibold">Be the first to know</h3>
+        <p class="mt-2">
+          We’re finalising the finishing touches now. If you’d like updates, to register your
+          interest, or to arrange an early visit once we open, please get in touch.
+        </p>
+        <a
+          href="/contact"
+          class="mt-4 inline-block px-5 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+        >
+          Register interest
+        </a>
+      </div>
+
+      <div class="mt-8">
+        <h3 class="text-lg font-semibold">Growing thoughtfully</h3>
+        <p class="mt-2">
+          Radcliffe is just the beginning. We’re exploring additional homes across Greater
+          Manchester and will share new locations as soon as they’re confirmed. If you’d like
+          Inguz Care in your area, we’d love to hear from you.
+        </p>
+      </div>
+    </article>
   </section>
 </Layout>
