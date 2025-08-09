@@ -1,8 +1,11 @@
 ---
 import '../styles/global.css';
 
-/** Pass a page title/description from each page */
-const { title = "Inguz Care", description = "High-quality residential care for children and young people." } = Astro.props;
+/** Page title/description come from each page */
+const {
+  title = "Inguz Care",
+  description = "High-quality residential care for children and young people."
+} = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -10,22 +13,44 @@ const { title = "Inguz Care", description = "High-quality residential care for c
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#5f7c7b" />
+
+    <!-- Social sharing defaults -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://www.inguzcare.co.uk" />
+    <meta property="og:site_name" content="Inguz Care" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon (using your logo for now) -->
+    <link rel="icon" href="/logo.jpg" />
   </head>
   <body class="min-h-screen bg-white text-slate-900">
     <header class="border-b">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" class="font-bold text-xl">Inguz Care</a>
-        <nav class="space-x-6">
-          <a class="hover:underline" href="/our-homes">Our Homes</a>
-          <a class="hover:underline" href="/services">Services</a>
-          <a class="hover:underline" href="/about">About</a>
-          <a class="hover:underline" href="/contact">Contact</a>
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logo.jpg" alt="Inguz Care logo" class="h-10 w-10 rounded-md object-cover" />
+          <span class="font-semibold text-lg">Inguz Care</span>
+        </a>
+        <nav class="flex items-center gap-6">
+          <a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a>
+          <a class="hover:text-[#5f7c7b]" href="/services">Services</a>
+          <a class="hover:text-[#5f7c7b]" href="/about">About</a>
+          <a
+            href="/contact"
+            class="px-4 py-2 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+          >
+            Contact
+          </a>
         </nav>
       </div>
     </header>
 
     <main>
-      <slot />  {/* page-specific content appears here */}
+      <slot />
     </main>
 
     <footer class="border-t">
