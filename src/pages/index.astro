@@ -47,27 +47,28 @@ import Layout from '../layouts/Base.astro';
     </div>
   </section>
 
-  <!-- OUR VALUES -->
-  <section id="values" class="py-16">
+  <!-- OUR VALUES (smaller tiles) -->
+  <section id="values" class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold text-center">Our Values</h2>
-      <p class="mt-3 text-center text-slate-600">Tap a value to read more.</p>
+      <p class="mt-2 text-center text-slate-600">Tap a value to read more.</p>
 
-      <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      <!-- 2 columns on phones, 4 on desktop -->
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         <!-- 1) Safety First -->
-        <details class="rounded-2xl border overflow-hidden">
-          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus:outline-none">
-            <div class="aspect-square flex flex-col items-center justify-center p-6 text-center">
-              <span class="text-5xl mb-3">🛡️</span>
-              <h3 class="text-xl font-semibold">Safety First</h3>
-              <span class="mt-1 text-xs text-slate-500">(tap to expand)</span>
+        <details class="rounded-xl border overflow-hidden">
+          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]">
+            <div class="aspect-square flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-3xl mb-1.5">🛡️</span>
+              <h3 class="text-base font-semibold leading-tight">Safety First</h3>
+              <span class="mt-1 text-[11px] text-slate-500">(tap)</span>
             </div>
           </summary>
-          <div class="p-6 space-y-3">
+          <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
               Our promise: We create predictable, nurturing routines where children feel protected and calm.
             </p>
-            <ul class="list-disc pl-6 space-y-1">
+            <ul class="list-disc pl-5 space-y-1">
               <li>Consistent boundaries and trauma-aware care, 24/7.</li>
               <li>Well-trained staff, clear safeguarding practice, and calm spaces.</li>
               <li>We notice early signs of worry and act quickly and kindly.</li>
@@ -76,19 +77,19 @@ import Layout from '../layouts/Base.astro';
         </details>
 
         <!-- 2) Belonging & Warmth -->
-        <details class="rounded-2xl border overflow-hidden">
-          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus:outline-none">
-            <div class="aspect-square flex flex-col items-center justify-center p-6 text-center">
-              <span class="text-5xl mb-3">🏠</span>
-              <h3 class="text-xl font-semibold">Belonging &amp; Warmth</h3>
-              <span class="mt-1 text-xs text-slate-500">(tap to expand)</span>
+        <details class="rounded-xl border overflow-hidden">
+          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]">
+            <div class="aspect-square flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-3xl mb-1.5">🏠</span>
+              <h3 class="text-base font-semibold leading-tight">Belonging &amp; Warmth</h3>
+              <span class="mt-1 text-[11px] text-slate-500">(tap)</span>
             </div>
           </summary>
-          <div class="p-6 space-y-3">
+          <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
               Our promise: This is a home—children are known, accepted, and cared for as individuals.
             </p>
-            <ul class="list-disc pl-6 space-y-1">
+            <ul class="list-disc pl-5 space-y-1">
               <li>Stable relationships and a family-style atmosphere.</li>
               <li>Celebrations of culture, identity, and milestones.</li>
               <li>House traditions that build trust and togetherness.</li>
@@ -97,19 +98,19 @@ import Layout from '../layouts/Base.astro';
         </details>
 
         <!-- 3) Voice & Choice -->
-        <details class="rounded-2xl border overflow-hidden">
-          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus:outline-none">
-            <div class="aspect-square flex flex-col items-center justify-center p-6 text-center">
-              <span class="text-5xl mb-3">🗣️</span>
-              <h3 class="text-xl font-semibold">Voice &amp; Choice</h3>
-              <span class="mt-1 text-xs text-slate-500">(tap to expand)</span>
+        <details class="rounded-xl border overflow-hidden">
+          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]">
+            <div class="aspect-square flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-3xl mb-1.5">🗣️</span>
+              <h3 class="text-base font-semibold leading-tight">Voice &amp; Choice</h3>
+              <span class="mt-1 text-[11px] text-slate-500">(tap)</span>
             </div>
           </summary>
-          <div class="p-6 space-y-3">
+          <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
               Our promise: Children shape their day, their plans, and their future with real say.
             </p>
-            <ul class="list-disc pl-6 space-y-1">
+            <ul class="list-disc pl-5 space-y-1">
               <li>Everyday choices (meals, activities, room décor) that build confidence.</li>
               <li>Care plans written with the child, not just about them.</li>
               <li>Honest feedback loops—what you say changes what we do.</li>
@@ -118,19 +119,19 @@ import Layout from '../layouts/Base.astro';
         </details>
 
         <!-- 4) Growth for Life -->
-        <details class="rounded-2xl border overflow-hidden">
-          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus:outline-none">
-            <div class="aspect-square flex flex-col items-center justify-center p-6 text-center">
-              <span class="text-5xl mb-3">🌱</span>
-              <h3 class="text-xl font-semibold">Growth for Life</h3>
-              <span class="mt-1 text-xs text-slate-500">(tap to expand)</span>
+        <details class="rounded-xl border overflow-hidden">
+          <summary class="cursor-pointer bg-slate-50 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]">
+            <div class="aspect-square flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-3xl mb-1.5">🌱</span>
+              <h3 class="text-base font-semibold leading-tight">Growth for Life</h3>
+              <span class="mt-1 text-[11px] text-slate-500">(tap)</span>
             </div>
           </summary>
-          <div class="p-6 space-y-3">
+          <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
               Our promise: We nurture strengths and skills that last well beyond our front door.
             </p>
-            <ul class="list-disc pl-6 space-y-1">
+            <ul class="list-disc pl-5 space-y-1">
               <li>Education, hobbies, and life skills (from homework to cooking).</li>
               <li>Step-by-step independence with the right support at the right time.</li>
               <li>Goals reviewed often so progress is visible and celebrated.</li>
