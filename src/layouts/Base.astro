@@ -15,7 +15,6 @@ const {
     <meta name="description" content={description} />
     <meta name="theme-color" content="#5f7c7b" />
 
-    <!-- Social sharing defaults -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -25,25 +24,50 @@ const {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <!-- Favicon (using your logo for now) -->
     <link rel="icon" href="/logo.jpg" />
   </head>
   <body class="min-h-screen bg-white text-slate-900">
     <!-- Header -->
     <header class="border-b">
-      <!-- Stack on mobile; row on md+ -->
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-        <!-- Brand: logo with name UNDER on mobile -->
+        <!-- Brand -->
         <a href="/" class="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-3">
           <img src="/logo.jpg" alt="Inguz Care logo" class="h-10 w-10 rounded-md object-cover" />
           <span class="font-semibold text-base sm:text-lg leading-tight">Inguz Care</span>
         </a>
 
-        <!-- Nav wraps on small screens so nothing overlaps -->
+        <!-- Nav -->
         <nav class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm md:text-base">
           <a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a>
           <a class="hover:text-[#5f7c7b]" href="/services">Services</a>
-          <a class="hover:text-[#5f7c7b]" href="/about">About</a>
+
+          <!-- About: hover/focus dropdown -->
+          <div class="relative group">
+            <a
+              href="/about"
+              class="flex items-center gap-1 hover:text-[#5f7c7b]"
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
+              About <span aria-hidden="true">▾</span>
+            </a>
+            <ul
+              class="absolute left-0 mt-2 hidden group-hover:block group-focus-within:block w-56 rounded-xl border bg-white shadow-md p-2 z-50"
+              role="menu"
+            >
+              <li>
+                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/team" role="menuitem">
+                  Meet the Team
+                </a>
+              </li>
+              <li>
+                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers" role="menuitem">
+                  Careers with Inguz Care
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <a
             href="/contact"
             class="px-4 py-2 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
@@ -62,7 +86,6 @@ const {
     <!-- Footer -->
     <footer class="border-t bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-        <!-- Column 1: Logo + blurb -->
         <div>
           <a href="/" class="flex items-center gap-3">
             <img src="/logo.jpg" alt="Inguz Care logo" class="h-10 w-10 rounded-md object-cover" />
@@ -73,18 +96,18 @@ const {
           </p>
         </div>
 
-        <!-- Column 2: Site -->
         <div>
           <h3 class="text-sm font-semibold text-slate-900">Site</h3>
           <ul class="mt-3 space-y-2 text-sm">
             <li><a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a></li>
             <li><a class="hover:text-[#5f7c7b]" href="/services">Services</a></li>
             <li><a class="hover:text-[#5f7c7b]" href="/about">About</a></li>
+            <li><a class="hover:text-[#5f7c7b]" href="/team">Meet the Team</a></li>
+            <li><a class="hover:text-[#5f7c7b]" href="/careers">Careers</a></li>
             <li><a class="hover:text-[#5f7c7b]" href="/contact">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Legal -->
         <div>
           <h3 class="text-sm font-semibold text-slate-900">Legal</h3>
           <ul class="mt-3 space-y-2 text-sm">
@@ -94,12 +117,11 @@ const {
           </ul>
         </div>
 
-        <!-- Column 4: Contact -->
         <div>
           <h3 class="text-sm font-semibold text-slate-900">Contact</h3>
           <ul class="mt-3 space-y-2 text-sm">
-            <li>Email: <a class="hover:text-[#5f7c7b]" href="mailto:hello@inguzcare.co.uk">InguzCare@outlook.com</a></li>
-            <li>Phone: <a class="hover:text-[#5f7c7b]" href="tel:01234567890">Currently Unavailable</a></li>
+            <li>Email: <a class="hover:text-[#5f7c7b]" href="mailto:hello@inguzcare.co.uk">hello@inguzcare.co.uk</a></li>
+            <li>Phone: <a class="hover:text-[#5f7c7b]" href="tel:01234567890">01234 567 890</a></li>
           </ul>
         </div>
       </div>
