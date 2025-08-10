@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 
-/** Page title/description come from each page */
 const {
   title = "Inguz Care",
   description = "High-quality residential care for children and young people."
@@ -15,6 +14,7 @@ const {
     <meta name="description" content={description} />
     <meta name="theme-color" content="#5f7c7b" />
 
+    <!-- Social -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -41,18 +41,24 @@ const {
           <a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a>
           <a class="hover:text-[#5f7c7b]" href="/services">Services</a>
 
-          <!-- About: hover/focus dropdown -->
+          <!-- About: stable hover/focus dropdown -->
           <div class="relative group">
-            <a
-              href="/about"
-              class="flex items-center gap-1 hover:text-[#5f7c7b]"
+            <!-- Button trigger prevents accidental navigation -->
+            <button
+              type="button"
+              class="flex items-center gap-1 hover:text-[#5f7c7b] py-2"
               aria-haspopup="menu"
               aria-expanded="false"
             >
               About <span aria-hidden="true">▾</span>
-            </a>
+            </button>
+
+            <!-- Menu: flush to trigger; visible on hover or keyboard focus -->
             <ul
-              class="absolute left-0 mt-2 hidden group-hover:block group-focus-within:block w-56 rounded-xl border bg-white shadow-md p-2 z-50"
+              class="absolute left-0 top-full w-56 rounded-xl border bg-white shadow-md p-2 z-50
+                     invisible opacity-0 translate-y-1 transition
+                     group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                     group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0"
               role="menu"
             >
               <li>
@@ -63,6 +69,11 @@ const {
               <li>
                 <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers" role="menuitem">
                   Careers with Inguz Care
+                </a>
+              </li>
+              <li class="mt-1 border-t pt-1">
+                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/about" role="menuitem">
+                  About Inguz Care
                 </a>
               </li>
             </ul>
@@ -133,5 +144,18 @@ const {
         </div>
       </div>
     </footer>
+
+    <!-- Small enhancement: keep aria-expanded in sync -->
+    <script is:inline>
+      const group = document.currentScript?.parentElement?.querySelector('.group');
+      if (group) {
+        const btn = group.querySelector('button');
+        function set(val){ btn && btn.setAttribute('aria-expanded', String(val)); }
+        group.addEventListener('mouseenter', ()=>set(true));
+        group.addEventListener('mouseleave', ()=>set(false));
+        group.addEventListener('focusin',  ()=>set(true));
+        group.addEventListener('focusout', (e)=>{ if (!group.contains(e.relatedTarget)) set(false); });
+      }
+    </script>
   </body>
 </html>
