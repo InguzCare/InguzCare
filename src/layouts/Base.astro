@@ -1,30 +1,88 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 const {
-  title = "Inguz Care",
-  description = "High-quality residential care for children and young people."
+  title = "Specialised Residential Care Homes for Young People | Inguz Care",
+  description = "Professional residential care homes for young people in Greater Manchester. Trauma-informed, relationship-based support with tailored plans.",
+  ogImage = "/logo.jpg",
 } = Astro.props;
+
+/* Canonical URL for current page */
+const canonical = Astro.site
+  ? new URL(Astro.url.pathname + Astro.url.search, Astro.site).toString()
+  : undefined;
+
+/* LocalBusiness schema (tweak details when ready) */
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Inguz Care",
+  url: "https://www.inguzcare.co.uk",
+  description:
+    "Specialised residential care homes for young people. Trauma-informed, relationship-based support with tailored plans.",
+  telephone: "01234 567 890", // TODO: replace with real number
+  image: new URL(ogImage, Astro.site ?? "https://www.inguzcare.co.uk").toString(),
+  logo: new URL("/logo.jpg", Astro.site ?? "https://www.inguzcare.co.uk").toString(),
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Radcliffe",
+    addressRegion: "Greater Manchester",
+    postalCode: "",
+    addressCountry: "GB",
+  },
+  sameAs: [
+    // Add social links when you have them
+  ],
+};
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title & description -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#5f7c7b" />
 
-    <!-- Social -->
+    <!-- Canonical -->
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    <!-- Robots -->
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://www.inguzcare.co.uk" />
+    <meta property="og:url" content={canonical ?? "https://www.inguzcare.co.uk"} />
     <meta property="og:site_name" content="Inguz Care" />
+    <meta property="og:image" content={new URL(ogImage, Astro.site ?? "https://www.inguzcare.co.uk").toString()} />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site ?? "https://www.inguzcare.co.uk").toString()} />
 
     <link rel="icon" href="/logo.jpg" />
+    <meta name="theme-color" content="#5f7c7b" />
+
+    <!-- JSON-LD schema -->
+    <script type="application/ld+json">
+      {JSON.stringify(schema)}
+    </script>
+
+    <!-- Google Search Console (add when you have it) -->
+    <!-- <meta name="google-site-verification" content="PASTE_CODE_HERE" /> -->
+
+    <!-- GA4 (replace G-XXXXXXX when you have it)
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
+    </script>
+    -->
   </head>
   <body class="min-h-screen bg-white text-slate-900">
     <!-- Header -->
@@ -41,9 +99,8 @@ const {
           <a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a>
           <a class="hover:text-[#5f7c7b]" href="/services">Services</a>
 
-          <!-- About: stable hover/focus dropdown -->
+          <!-- About dropdown (stable: hover/focus, no gap) -->
           <div class="relative group">
-            <!-- Button trigger prevents accidental navigation -->
             <button
               type="button"
               class="flex items-center gap-1 hover:text-[#5f7c7b] py-2"
@@ -53,7 +110,6 @@ const {
               About <span aria-hidden="true">▾</span>
             </button>
 
-            <!-- Menu: flush to trigger; visible on hover or keyboard focus -->
             <ul
               class="absolute left-0 top-full w-56 rounded-xl border bg-white shadow-md p-2 z-50
                      invisible opacity-0 translate-y-1 transition
@@ -145,16 +201,18 @@ const {
       </div>
     </footer>
 
-    <!-- Small enhancement: keep aria-expanded in sync -->
+    <!-- Accessibility: keep aria-expanded in sync -->
     <script is:inline>
-      const group = document.currentScript?.parentElement?.querySelector('.group');
+      const group = document.querySelector('header .group');
       if (group) {
         const btn = group.querySelector('button');
-        function set(val){ btn && btn.setAttribute('aria-expanded', String(val)); }
-        group.addEventListener('mouseenter', ()=>set(true));
-        group.addEventListener('mouseleave', ()=>set(false));
-        group.addEventListener('focusin',  ()=>set(true));
-        group.addEventListener('focusout', (e)=>{ if (!group.contains(e.relatedTarget)) set(false); });
+        const set = (v) => btn && btn.setAttribute('aria-expanded', String(v));
+        group.addEventListener('mouseenter', () => set(true));
+        group.addEventListener('mouseleave', () => set(false));
+        group.addEventListener('focusin', () => set(true));
+        group.addEventListener('focusout', (e) => {
+          if (!group.contains(e.relatedTarget)) set(false);
+        });
       }
     </script>
   </body>
