@@ -1,10 +1,12 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  /* Tweak these later to your exact green */
-  --color-brand:     #5f7c7b;  /* primary */
-  --color-brand-50:  #eef5f4;
-  --color-brand-100: #dbe9e7;
-  --color-brand-600: #486664;
-  --color-brand-700: #3d5756;
+/* your brand vars... */
+:root{
+  --color-brand:#5f7c7b;
+  --color-brand-50:#eef5f4;
+  --color-brand-100:#dbe9e7;
+  --color-brand-600:#486664;
+  --color-brand-700:#3d5756;
 }
