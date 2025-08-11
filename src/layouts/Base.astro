@@ -2,17 +2,15 @@
 import "../styles/global.css";
 
 const {
-  title = "Specialised Residential Care Homes for Young People | Inguz Care",
-  description = "Professional residential care homes for young people in Greater Manchester. Trauma-informed, relationship-based support with tailored plans.",
+  title = "Residential Care for Young People | Inguz Care",
+  description = "We provide safe, nurturing homes with tailored support plans, helping young people grow, learn, and thrive.",
   ogImage = "/logo.jpg",
 } = Astro.props;
 
-/* Canonical URL for current page */
 const canonical = Astro.site
   ? new URL(Astro.url.pathname + Astro.url.search, Astro.site).toString()
   : undefined;
 
-/* LocalBusiness schema (tweak details when ready) */
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -20,19 +18,16 @@ const schema = {
   url: "https://www.inguzcare.co.uk",
   description:
     "Specialised residential care homes for young people. Trauma-informed, relationship-based support with tailored plans.",
-  telephone: "01234 567 890", // TODO: replace with real number
+  telephone: "01234 567 890",
   image: new URL(ogImage, Astro.site ?? "https://www.inguzcare.co.uk").toString(),
   logo: new URL("/logo.jpg", Astro.site ?? "https://www.inguzcare.co.uk").toString(),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Radcliffe",
     addressRegion: "Greater Manchester",
-    postalCode: "",
     addressCountry: "GB",
   },
-  sameAs: [
-    // Add social links when you have them
-  ],
+  sameAs: [],
 };
 ---
 <html lang="en">
@@ -40,118 +35,94 @@ const schema = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Title & description -->
     <title>{title}</title>
     <meta name="description" content={description} />
-
-    <!-- Canonical -->
     {canonical && <link rel="canonical" href={canonical} />}
 
-    <!-- Robots -->
     <meta name="robots" content="index,follow" />
-
-    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical ?? "https://www.inguzcare.co.uk"} />
     <meta property="og:site_name" content="Inguz Care" />
     <meta property="og:image" content={new URL(ogImage, Astro.site ?? "https://www.inguzcare.co.uk").toString()} />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL(ogImage, Astro.site ?? "https://www.inguzcare.co.uk").toString()} />
-
     <link rel="icon" href="/logo.jpg" />
     <meta name="theme-color" content="#5f7c7b" />
 
-    <!-- JSON-LD schema -->
-    <script type="application/ld+json">
-      {JSON.stringify(schema)}
-    </script>
-
-    <!-- Google Search Console (add when you have it) -->
-    <!-- <meta name="google-site-verification" content="PASTE_CODE_HERE" /> -->
-
-    <!-- GA4 (replace G-XXXXXXX when you have it)
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
-    </script>
-    -->
+    <script type="application/ld+json">{JSON.stringify(schema)}</script>
   </head>
+
   <body class="min-h-screen bg-white text-slate-900">
     <!-- Header -->
-    <header class="border-b">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+    <header class="border-b bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
         <!-- Brand -->
-        <a href="/" class="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-3">
+        <a href="/" class="flex items-center gap-3">
           <img src="/logo.jpg" alt="Inguz Care logo" class="h-10 w-10 rounded-md object-cover" />
-          <span class="font-semibold text-base sm:text-lg leading-tight">Inguz Care</span>
+          <span class="font-semibold text-lg">Inguz Care</span>
         </a>
 
-        <!-- Nav -->
-        <nav class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm md:text-base">
+        <!-- Desktop nav (md+) -->
+        <nav class="hidden md:flex items-center gap-4 text-base">
           <a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a>
           <a class="hover:text-[#5f7c7b]" href="/services">Services</a>
 
-          <!-- About dropdown (stable: hover/focus, no gap) -->
+          <!-- About dropdown on desktop only -->
           <div class="relative group">
-            <button
-              type="button"
-              class="flex items-center gap-1 hover:text-[#5f7c7b] py-2"
-              aria-haspopup="menu"
-              aria-expanded="false"
-            >
+            <button type="button" class="flex items-center gap-1 hover:text-[#5f7c7b] py-2" aria-haspopup="menu" aria-expanded="false">
               About <span aria-hidden="true">▾</span>
             </button>
-
             <ul
               class="absolute left-0 top-full w-56 rounded-xl border bg-white shadow-md p-2 z-50
                      invisible opacity-0 translate-y-1 transition
                      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
                      group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0"
-              role="menu"
-            >
-              <li>
-                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/team" role="menuitem">
-                  Meet the Team
-                </a>
-              </li>
-              <li>
-                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers" role="menuitem">
-                  Careers with Inguz Care
-                </a>
-              </li>
-              <li class="mt-1 border-t pt-1">
-                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/about" role="menuitem">
-                  About Inguz Care
-                </a>
-              </li>
+              role="menu">
+              <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/team" role="menuitem">Meet the Team</a></li>
+              <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers" role="menuitem">Careers with Inguz Care</a></li>
+              <li class="mt-1 border-t pt-1"><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/about" role="menuitem">About Inguz Care</a></li>
             </ul>
           </div>
 
-          <a
-            href="/contact"
-            class="px-4 py-2 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
-          >
-            Contact
-          </a>
+          <a href="/contact" class="px-4 py-2 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]">Contact</a>
+        </nav>
+
+        <!-- Mobile menu button (shows on small screens) -->
+        <button
+          id="menuBtn"
+          class="md:hidden inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm font-medium hover:bg-slate-50"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          aria-label="Open menu">
+          Menu
+        </button>
+      </div>
+
+      <!-- Mobile menu panel -->
+      <div id="mobileMenu" class="md:hidden hidden border-t bg-white">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1 text-base">
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/our-homes">Our Homes</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/services">Services</a>
+          <!-- flatten About links on mobile so they’re easy to tap -->
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/about">About Inguz Care</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/team">Meet the Team</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers">Careers with Inguz Care</a>
+          <a class="mt-1 rounded-lg px-3 py-2 bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]" href="/contact">Contact</a>
         </nav>
       </div>
     </header>
 
-    <!-- Page content -->
+    <!-- Main content -->
     <main>
       <slot />
     </main>
 
     <!-- Footer -->
-    <footer class="border-t bg-slate-50">
+    <footer class="border-t bg-slate-50 mt-10">
       <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <a href="/" class="flex items-center gap-3">
@@ -201,17 +172,37 @@ const schema = {
       </div>
     </footer>
 
-    <!-- Accessibility: keep aria-expanded in sync -->
+    <!-- Scripts: desktop About aria + mobile menu toggle -->
     <script is:inline>
-      const group = document.querySelector('header .group');
-      if (group) {
-        const btn = group.querySelector('button');
+      // Desktop About dropdown: keep aria-expanded in sync
+      const aboutGroup = document.querySelector('header .group');
+      if (aboutGroup) {
+        const btn = aboutGroup.querySelector('button');
         const set = (v) => btn && btn.setAttribute('aria-expanded', String(v));
-        group.addEventListener('mouseenter', () => set(true));
-        group.addEventListener('mouseleave', () => set(false));
-        group.addEventListener('focusin', () => set(true));
-        group.addEventListener('focusout', (e) => {
-          if (!group.contains(e.relatedTarget)) set(false);
+        aboutGroup.addEventListener('mouseenter', () => set(true));
+        aboutGroup.addEventListener('mouseleave', () => set(false));
+        aboutGroup.addEventListener('focusin', () => set(true));
+        aboutGroup.addEventListener('focusout', (e) => {
+          if (!aboutGroup.contains(e.relatedTarget)) set(false);
+        });
+      }
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(isHidden));
+        });
+
+        // Close menu when resizing up to desktop
+        window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          }
         });
       }
     </script>
