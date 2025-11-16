@@ -21,12 +21,11 @@ import Layout from '../layouts/Base.astro';
         <!-- centered on all screens -->
         <div class="text-white text-center max-w-4xl mx-auto">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight max-w-[22ch] mx-auto">
-            Specialised Residential Care for Young People.  Inguz Care
+            Welcome to INGUZ Care
           </h1>
 
           <p class="mt-6 text-base sm:text-lg md:text-xl mx-auto max-w-[60ch]">
-            We provide safe, nurturing homes with tailored support plans,
-            helping young people grow, learn, and thrive.
+            A home built on warmth, belonging and growth.
           </p>
 
           <!-- Centered CTA buttons -->
@@ -49,90 +48,165 @@ import Layout from '../layouts/Base.astro';
     </div>
   </section>
 
-  <!-- OUR VALUES (smaller coloured tiles with centred headings) -->
+  <!-- INTRO / LANDING COPY -->
+  <section class="py-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-slate-900 space-y-4">
+        <p>
+          At INGUZ Care, we believe that every young person deserves to feel safe, valued and understood.
+          Our home provides more than just care – it’s a space where relationships are nurtured, voices are
+          heard, and every small step forward is celebrated.
+        </p>
+        <p>
+          We create a family environment that encourages trust, self-expression and stability. Our approach
+          is guided by therapeutic principles such as PACE (Playfulness, Acceptance, Curiosity and Empathy)
+          and trauma-informed care – not as buzzwords, but as everyday practices in how we listen, respond
+          and connect.
+        </p>
+        <p>
+          Our team offers consistency, compassion and structure, helping each young person rediscover their
+          strengths and build the confidence to move towards their future. Whether it’s sharing a meal,
+          talking through emotions at the end of the day, or learning new ways to cope with challenges,
+          we focus on moments that matter.
+        </p>
+        <p>
+          We work closely with families, local authorities and therapeutic partners to ensure every child’s
+          care journey is personalised and supported. You’re not just part of a service here – you’re part of
+          a home that believes in your potential and your right to belong.
+        </p>
+
+        <div class="mt-4">
+          <h2 class="text-xl font-semibold">Our Promise</h2>
+          <p class="mt-2">
+            We listen. We reflect. We respond.
+            <br />
+            Because at INGUZ Care, change begins with connection.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR VALUES (expanded list) -->
   <section id="values" class="py-14">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold text-center">Our Values</h2>
-      <p class="mt-2 text-center text-slate-600">Tap a value to read more.</p>
+      <p class="mt-2 text-center text-slate-600">
+        Our values shape everything we do — from how we recruit and train staff to how children and families
+        experience our homes.
+      </p>
+      <p class="mt-1 text-center text-slate-600">Tap a value to read more.</p>
 
       <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        <!-- 1) Safety First -->
+        <!-- Dignity & Respect -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]">
+          <summary
+            class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]"
+          >
             <div class="aspect-square grid place-items-center text-center bg-[#5f7c7b] text-white px-3">
-              <h3 class="text-base md:text-lg font-semibold leading-tight">Safety First</h3>
-              <span class="sr-only">(tap to expand)</span>
+              <h3 class="text-base md:text-lg font-semibold leading-tight">Dignity &amp; Respect</h3>
             </div>
           </summary>
           <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
-              Our promise: We create predictable, nurturing routines where children feel protected and calm.
+              Every child is valued as an individual with their own culture, identity and voice.
             </p>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Consistent boundaries and trauma-aware care, 24/7.</li>
-              <li>Well-trained staff, clear safeguarding practice, and calm spaces.</li>
-              <li>We notice early signs of worry and act quickly and kindly.</li>
-            </ul>
           </div>
         </details>
 
-        <!-- 2) Belonging & Warmth -->
+        <!-- Compassion & Kindness -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6f908f]">
+          <summary
+            class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6f908f]"
+          >
             <div class="aspect-square grid place-items-center text-center bg-[#6f908f] text-white px-3">
-              <h3 class="text-base md:text-lg font-semibold leading-tight">Belonging &amp; Warmth</h3>
-              <span class="sr-only">(tap to expand)</span>
+              <h3 class="text-base md:text-lg font-semibold leading-tight">Compassion &amp; Kindness</h3>
             </div>
           </summary>
           <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
-              Our promise: This is a home—children are known, accepted, and cared for as individuals.
+              We care with empathy, patience and genuine warmth.
             </p>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Stable relationships and a family-style atmosphere.</li>
-              <li>Celebrations of culture, identity, and milestones.</li>
-              <li>House traditions that build trust and togetherness.</li>
-            </ul>
           </div>
         </details>
 
-        <!-- 3) Voice & Choice -->
+        <!-- Safety & Stability -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#3d5756]">
+          <summary
+            class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#3d5756]"
+          >
             <div class="aspect-square grid place-items-center text-center bg-[#3d5756] text-white px-3">
-              <h3 class="text-base md:text-lg font-semibold leading-tight">Voice &amp; Choice</h3>
-              <span class="sr-only">(tap to expand)</span>
+              <h3 class="text-base md:text-lg font-semibold leading-tight">Safety &amp; Stability</h3>
             </div>
           </summary>
           <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
-              Our promise: Children shape their day, their plans, and their future with real say.
+              We build predictable routines and maintain strong safeguarding throughout.
             </p>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Everyday choices (meals, activities, room décor) that build confidence.</li>
-              <li>Care plans written with the child, not just about them.</li>
-              <li>Honest feedback loops—what you say changes what we do.</li>
-            </ul>
           </div>
         </details>
 
-        <!-- 4) Growth for Life -->
+        <!-- Empowerment & Equality -->
         <details class="rounded-xl border overflow-hidden">
-          <summary class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#88a7a6]">
+          <summary
+            class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#88a7a6]"
+          >
             <div class="aspect-square grid place-items-center text-center bg-[#88a7a6] text-white px-3">
-              <h3 class="text-base md:text-lg font-semibold leading-tight">Growth for Life</h3>
-              <span class="sr-only">(tap to expand)</span>
+              <h3 class="text-base md:text-lg font-semibold leading-tight">Empowerment &amp; Equality</h3>
             </div>
           </summary>
           <div class="p-4 space-y-2.5 text-sm">
             <p class="font-medium">
-              Our promise: We nurture strengths and skills that last well beyond our front door.
+              We help children find their voice, build independence and access opportunity.
             </p>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>Education, hobbies, and life skills (from homework to cooking).</li>
-              <li>Step-by-step independence with the right support at the right time.</li>
-              <li>Goals reviewed often so progress is visible and celebrated.</li>
-            </ul>
+          </div>
+        </details>
+
+        <!-- Openness & Integrity -->
+        <details class="rounded-xl border overflow-hidden">
+          <summary
+            class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#5f7c7b]"
+          >
+            <div class="aspect-square grid place-items-center text-center bg-[#5f7c7b] text-white px-3">
+              <h3 class="text-base md:text-lg font-semibold leading-tight">Openness &amp; Integrity</h3>
+            </div>
+          </summary>
+          <div class="p-4 space-y-2.5 text-sm">
+            <p class="font-medium">
+              We communicate honestly and take accountability for our practice.
+            </p>
+          </div>
+        </details>
+
+        <!-- Partnership & Collaboration -->
+        <details class="rounded-xl border overflow-hidden">
+          <summary
+            class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6f908f]"
+          >
+            <div class="aspect-square grid place-items-center text-center bg-[#6f908f] text-white px-3">
+              <h3 class="text-base md:text-lg font-semibold leading-tight">Partnership &amp; Collaboration</h3>
+            </div>
+          </summary>
+          <div class="p-4 space-y-2.5 text-sm">
+            <p class="font-medium">
+              We work closely with families, professionals and the wider community.
+            </p>
+          </div>
+        </details>
+
+        <!-- Growth & Development -->
+        <details class="rounded-xl border overflow-hidden">
+          <summary
+            class="cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#3d5756]"
+          >
+            <div class="aspect-square grid place-items-center text-center bg-[#3d5756] text-white px-3">
+              <h3 class="text-base md:text-lg font-semibold leading-tight">Growth &amp; Development</h3>
+            </div>
+          </summary>
+          <div class="p-4 space-y-2.5 text-sm">
+            <p class="font-medium">
+              We invest in the learning of both children and staff — growing stronger together.
+            </p>
           </div>
         </details>
       </div>
