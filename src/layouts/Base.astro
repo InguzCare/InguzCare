@@ -70,10 +70,16 @@ const schema = {
         <nav class="hidden md:flex items-center gap-4 text-base">
           <a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a>
           <a class="hover:text-[#5f7c7b]" href="/services">Services</a>
+          <a class="hover:text-[#5f7c7b]" href="/children-and-families">Children &amp; Families</a>
 
           <!-- About dropdown on desktop only -->
           <div class="relative group">
-            <button type="button" class="flex items-center gap-1 hover:text-[#5f7c7b] py-2" aria-haspopup="menu" aria-expanded="false">
+            <button
+              type="button"
+              class="flex items-center gap-1 hover:text-[#5f7c7b] py-2"
+              aria-haspopup="menu"
+              aria-expanded="false"
+            >
               About <span aria-hidden="true">▾</span>
             </button>
             <ul
@@ -81,14 +87,32 @@ const schema = {
                      invisible opacity-0 translate-y-1 transition
                      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
                      group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0"
-              role="menu">
-              <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/team" role="menuitem">Meet the Team</a></li>
-              <li><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers" role="menuitem">Careers with Inguz Care</a></li>
-              <li class="mt-1 border-t pt-1"><a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/about" role="menuitem">About Inguz Care</a></li>
+              role="menu"
+            >
+              <li>
+                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/team" role="menuitem">
+                  Meet the Team
+                </a>
+              </li>
+              <li>
+                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers" role="menuitem">
+                  Careers with Inguz Care
+                </a>
+              </li>
+              <li class="mt-1 border-t pt-1">
+                <a class="block rounded-lg px-3 py-2 hover:bg-slate-50" href="/about" role="menuitem">
+                  About Inguz Care
+                </a>
+              </li>
             </ul>
           </div>
 
-          <a href="/contact" class="px-4 py-2 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]">Contact</a>
+          <a
+            href="/contact"
+            class="px-4 py-2 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+          >
+            Contact
+          </a>
         </nav>
 
         <!-- Mobile menu button (shows on small screens) -->
@@ -97,7 +121,8 @@ const schema = {
           class="md:hidden inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm font-medium hover:bg-slate-50"
           aria-controls="mobileMenu"
           aria-expanded="false"
-          aria-label="Open menu">
+          aria-label="Open menu"
+        >
           Menu
         </button>
       </div>
@@ -107,11 +132,21 @@ const schema = {
         <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1 text-base">
           <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/our-homes">Our Homes</a>
           <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/services">Services</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/children-and-families">
+            Children &amp; Families
+          </a>
           <!-- flatten About links on mobile so they’re easy to tap -->
           <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/about">About Inguz Care</a>
           <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/team">Meet the Team</a>
-          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers">Careers with Inguz Care</a>
-          <a class="mt-1 rounded-lg px-3 py-2 bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]" href="/contact">Contact</a>
+          <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="/careers">
+            Careers with Inguz Care
+          </a>
+          <a
+            class="mt-1 rounded-lg px-3 py-2 bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+            href="/contact"
+          >
+            Contact
+          </a>
         </nav>
       </div>
     </header>
@@ -139,6 +174,9 @@ const schema = {
           <ul class="mt-3 space-y-2 text-sm">
             <li><a class="hover:text-[#5f7c7b]" href="/our-homes">Our Homes</a></li>
             <li><a class="hover:text-[#5f7c7b]" href="/services">Services</a></li>
+            <li>
+              <a class="hover:text-[#5f7c7b]" href="/children-and-families">Children &amp; Families</a>
+            </li>
             <li><a class="hover:text-[#5f7c7b]" href="/about">About</a></li>
             <li><a class="hover:text-[#5f7c7b]" href="/team">Meet the Team</a></li>
             <li><a class="hover:text-[#5f7c7b]" href="/careers">Careers</a></li>
@@ -158,14 +196,26 @@ const schema = {
         <div>
           <h3 class="text-sm font-semibold text-slate-900">Contact</h3>
           <ul class="mt-3 space-y-2 text-sm">
-            <li>Email: <a class="hover:text-[#5f7c7b]" href="mailto:hello@inguzcare.co.uk">inguzcare@outlook.com</a></li>
-            <li>Phone: <a class="hover:text-[#5f7c7b]" href="tel:01234567890">Currently Unavailable</a></li>
+            <li>
+              Email:
+              <a class="hover:text-[#5f7c7b]" href="mailto:hello@inguzcare.co.uk">
+                inguzcare@outlook.com
+              </a>
+            </li>
+            <li>
+              Phone:
+              <a class="hover:text-[#5f7c7b]" href="tel:01234567890">
+                Currently Unavailable
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="border-t">
-        <div class="max-w-6xl mx-auto px-4 py-6 text-xs text-slate-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div
+          class="max-w-6xl mx-auto px-4 py-6 text-xs text-slate-500 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+        >
           <p>© {new Date().getFullYear()} Inguz Care. All rights reserved.</p>
           <p>Registered in England &amp; Wales.</p>
         </div>
