@@ -1,0 +1,247 @@
+---
+import Layout from '../../layouts/Base.astro';
+---
+
+<Layout
+  title="Children & Families — Inguz Care"
+  description="Child and family-friendly information about life at Inguz Care."
+>
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h1 class="text-3xl md:text-4xl font-bold">Children &amp; Families</h1>
+
+    <!-- Intro -->
+    <p class="mt-4 text-lg max-w-3xl">
+      Welcome to your home at Inguz Care — a place to feel safe, make friends, and try new things.
+    </p>
+    <p class="mt-4 text-lg max-w-3xl">
+      Inguz Care is a real home where the people who live and work here care about you, your story,
+      and what matters to you. This page helps you and your family see our home, meet the staff, and hear
+      what everyday life looks like.
+    </p>
+
+    <!-- Quick actions -->
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a
+        href="#photo-book"
+        class="inline-flex items-center rounded-lg border px-4 py-2 text-sm font-semibold hover:bg-slate-50"
+      >
+        📖 Photo book
+      </a>
+      <a
+        href="#video-tour"
+        class="inline-flex items-center rounded-lg border px-4 py-2 text-sm font-semibold hover:bg-slate-50"
+      >
+        🎥 Video tour
+      </a>
+      <a
+        href="/contact"
+        class="inline-flex items-center rounded-lg bg-[#5f7c7b] px-4 py-2 text-sm font-semibold text-white hover:bg-[#3d5756]"
+      >
+        ❓ Ask us a question
+      </a>
+    </div>
+
+    <!-- Photo Book (placeholder structure only for now) -->
+    <div id="photo-book" class="mt-10">
+      <h2 class="text-2xl font-semibold">Photo Book</h2>
+      <p class="mt-3 max-w-3xl">
+        We’re creating a friendly picture tour of the house so you can see the rooms, garden and spaces before you visit.
+        Photos and captions will be added here soon.
+      </p>
+
+      <!--
+        Future idea (does NOT show on the page):
+        - Full-screen carousel with captions and simple arrows
+        - "Ask about this photo" button on each image
+        - Downloadable one-page PDF "Picture tour"
+      -->
+    </div>
+
+    <!-- Video tour -->
+    <div id="video-tour" class="mt-10">
+      <h2 class="text-2xl font-semibold">Video Tour</h2>
+      <p class="mt-3 max-w-3xl">
+        We’re working on a short, friendly video (about 60–90 seconds) to show the home, the team and everyday spaces.
+        It will be informal, reassuring and include subtitles and a transcript so it’s easy for everyone to follow.
+      </p>
+
+      <!-- Video placeholder -->
+      <div class="mt-4 rounded-2xl border border-dashed p-6 text-center">
+        <p class="text-sm text-slate-600">
+          Video coming soon. This is where you’ll be able to watch a tour of the home.
+        </p>
+      </div>
+
+      <div class="mt-4 max-w-3xl text-sm text-slate-700">
+        <p class="font-medium">Suggested script:</p>
+        <p class="mt-2">
+          “Hi - welcome to Inguz Care! Come with me for a quick tour. This is the lounge where we hang out,
+          the kitchen where we share meals, and the garden where we play. Here’s a quiet room if you need space.
+          These are some of our team — we’re here to listen, help and keep you safe. If you want to see more
+          or ask a question, click ‘Contact us.’ See you soon!”
+        </p>
+      </div>
+    </div>
+
+    <!-- Meet the team (child-friendly summary) -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Meet the Team</h2>
+      <p class="mt-3 max-w-3xl">
+        These are some of the grown-ups you might meet. They are here to listen, keep you safe and help you
+        feel at home.
+      </p>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-2">
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Wikus Cookney</h3>
+          <p class="mt-1 text-sm text-slate-600">“Hi, I’m Wik. I manage the home.”</p>
+          <p class="mt-3 text-sm">
+            I make sure it’s a safe, warm place. I love fixing things and making sure everyone gets to
+            try new activities.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Richard Barfoot</h3>
+          <p class="mt-1 text-sm text-slate-600">“Hi, I’m Richard. I’m a mental health nurse.”</p>
+          <p class="mt-3 text-sm">
+            I help keep everyone healthy and listened to. I enjoy football and walking in the park.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Siobhan Barfoot</h3>
+          <p class="mt-1 text-sm text-slate-600">“Hi, I’m Siobhan. I’m a therapist.”</p>
+          <p class="mt-3 text-sm">
+            I help young people with their feelings. I bake cakes at the weekends.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Dr. Hayley Knagg</h3>
+          <p class="mt-1 text-sm text-slate-600">“Hi, I’m Hayley. I’m a psychologist.”</p>
+          <p class="mt-3 text-sm">
+            I chair our team meetings to make sure plans help you. I like gardening and animals.
+          </p>
+        </article>
+      </div>
+
+      <p class="mt-4 max-w-3xl text-sm text-slate-700">
+        (Each staff member will have a soft, friendly photo — smiling and relaxed, not clinical.)
+      </p>
+    </div>
+
+    <!-- What to expect -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">What to Expect</h2>
+      <p class="mt-3 max-w-3xl">
+        When you move in, we want you to feel welcome, not rushed. Here’s what will usually happen:
+      </p>
+      <ul class="mt-3 list-disc pl-6 space-y-2 max-w-3xl">
+        <li>You will have a friendly meeting and a little welcome pack.</li>
+        <li>We’ll show you around your room and the house.</li>
+        <li>You’ll meet your keyworker — someone who will listen to you and help make a plan with you.</li>
+        <li>We will listen to what you want and help you stay in touch with people who are important to you (if it’s safe).</li>
+        <li>If anything worries you, tell any staff member — we’ll help.</li>
+      </ul>
+    </div>
+
+    <!-- Family section -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Information for Families &amp; Carers</h2>
+      <p class="mt-3 max-w-3xl">
+        For parents, carers and guardians, we aim to offer clear, practical information and open communication.
+      </p>
+      <ul class="mt-3 list-disc pl-6 space-y-2 max-w-3xl">
+        <li>How we keep children safe, supported and emotionally contained.</li>
+        <li>
+          A 12-week assessment period including observations, meetings and a co-produced care plan that you are
+          invited to contribute to.
+        </li>
+        <li>Visiting and contact arrangements that are sensitive to each child’s circumstances and care plan.</li>
+        <li>How to request our Statement of Purpose and policies.</li>
+        <li>
+          Plans for a secure, password-protected area for sensitive photos or reports that should not be shared publicly.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Safeguarding & Privacy -->
+    <div class="mt-10 rounded-xl bg-[#eef5f4] p-6">
+      <h2 class="text-2xl font-semibold">Safeguarding &amp; Privacy</h2>
+      <p class="mt-3 max-w-3xl">
+        Children’s safety, dignity and privacy come first. We will not publish identifying photos or personal details
+        of any child on this public page without explicit written consent from the child (where appropriate), their
+        parent or guardian, and the placing authority.
+      </p>
+      <p class="mt-3 max-w-3xl">
+        Photos on this public page will be non-identifying or staged. For family albums showing a child in situ,
+        we will use a secure, password-protected area and require written consent.
+      </p>
+      <p class="mt-3 max-w-3xl">
+        Parents and children can withdraw consent at any time, and we will remove images promptly.
+        For any requests, please contact:
+        <a href="mailto:contact@inguzcare.co.uk" class="underline">contact@inguzcare.co.uk</a>.
+      </p>
+    </div>
+
+    <!-- Accessibility & inclusion -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Accessibility &amp; Inclusion</h2>
+      <ul class="mt-3 list-disc pl-6 space-y-2 max-w-3xl">
+        <li>All photos will include short alt text.</li>
+        <li>Videos will have subtitles and a transcript.</li>
+        <li>Text uses plain English with clear headings and easy-to-click buttons.</li>
+        <li>
+          We can provide a printable A4 version of this information for families who prefer paper or offline access.
+        </li>
+      </ul>
+    </div>
+
+    <!-- FAQs -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">FAQs</h2>
+      <div class="mt-4 space-y-4 max-w-3xl">
+        <div>
+          <p class="font-semibold">Can I bring my things?</p>
+          <p class="mt-1">
+            Yes — we encourage you to bring personal items to make your room feel like yours.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold">Can I see the house before I move in?</p>
+          <p class="mt-1">
+            Yes — we can arrange a visit or a video meet so you can see the home and meet some of the team.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold">Who can I talk to if I’m worried?</p>
+          <p class="mt-1">
+            You can talk to any staff member, your keyworker, or use the “Ask us a question” option to get in touch.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact & feedback -->
+    <div class="mt-10 rounded-xl bg-[#eef5f4] p-6">
+      <h2 class="text-xl font-semibold">Contact &amp; Feedback</h2>
+      <p class="mt-2 max-w-3xl">
+        If you would like a private photo album of your child, to talk about consent, or to arrange a visit,
+        please get in touch.
+      </p>
+      <p class="mt-3 max-w-3xl">
+        <span class="font-medium">Email:</span>
+        <a href="mailto:contact@inguzcare.co.uk" class="underline ml-1">contact@inguzcare.co.uk</a> <br />
+        <span class="font-medium">Phone:</span>
+        <a href="tel:01619005856" class="underline ml-1">0161 900 5856</a>
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-5 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+      >
+        Arrange a visit
+      </a>
+    </div>
+  </section>
+</Layout>

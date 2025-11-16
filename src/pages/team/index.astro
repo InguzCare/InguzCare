@@ -1,38 +1,157 @@
 ---
 import Layout from '../../layouts/Base.astro';
 ---
-<Layout title="Meet the Team — Inguz Care" description="Profiles of our leadership and care team.">
+
+<Layout
+  title="Meet the Team — Inguz Care"
+  description="Meet the leadership, residential and clinical team behind Inguz Care."
+>
   <section class="max-w-6xl mx-auto px-4 py-12">
     <h1 class="text-3xl md:text-4xl font-bold">Meet the Team</h1>
+
+    <!-- Intro -->
     <p class="mt-4 max-w-3xl text-lg">
-      We’re assembling a warm, steady, child-centred team who bring calm, reliability and curiosity to work every day.
-      Detailed profiles will be published here soon.
+      At Inguz Care, the heart of any home is the people within it. Our team brings together dedicated,
+      trauma-informed professionals who share one purpose: to create a safe, nurturing, and stable environment
+      where every young person feels seen, supported, and valued.
+    </p>
+    <p class="mt-4 max-w-3xl text-lg">
+      We’re assembling a warm, steady, and curious team who approach each day with compassion, consistency,
+      and respect — qualities that help children build trust and begin to heal.
     </p>
 
-    <div class="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-      <div class="rounded-2xl border p-6 text-center">
-        <div class="mx-auto h-24 w-24 rounded-full bg-slate-100"></div>
-        <p class="mt-4 font-semibold">Coming soon</p>
-        <p class="text-sm text-slate-600">Leadership profile</p>
-      </div>
-      <div class="rounded-2xl border p-6 text-center">
-        <div class="mx-auto h-24 w-24 rounded-full bg-slate-100"></div>
-        <p class="mt-4 font-semibold">Coming soon</p>
-        <p class="text-sm text-slate-600">Registered Manager</p>
-      </div>
-      <div class="rounded-2xl border p-6 text-center">
-        <div class="mx-auto h-24 w-24 rounded-full bg-slate-100"></div>
-        <p class="mt-4 font-semibold">Coming soon</p>
-        <p class="text-sm text-slate-600">Residential Support Team</p>
+    <!-- Our Leadership -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Our Leadership</h2>
+      <p class="mt-3 max-w-3xl">
+        Our leadership team combines strong safeguarding knowledge with a deeply human approach — ensuring every
+        decision begins with the question: “What does this mean for the child?”
+      </p>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <!-- Richard -->
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Richard Barfoot</h3>
+          <p class="mt-1 text-sm text-slate-600">Director / Responsible Individual &amp; Registered Mental Health Nurse</p>
+          <p class="mt-3">
+            Richard brings extensive experience in children’s services and mental health nursing. He ensures strategic
+            oversight, clinical quality, and organisational excellence, while championing child-centred,
+            trauma-informed practice.
+          </p>
+        </article>
+
+        <!-- Siobhan -->
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Siobhan Barfoot</h3>
+          <p class="mt-1 text-sm text-slate-600">Director &amp; CBT Therapist</p>
+          <p class="mt-3">
+            Siobhan is a qualified CBT therapist registered with BABCP, specialising in children and adolescent mental
+            health. She integrates therapeutic insight into every aspect of care and provides clinical supervision
+            to staff.
+          </p>
+        </article>
+
+        <!-- Hayley -->
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Dr. Hayley Knagg</h3>
+          <p class="mt-1 text-sm text-slate-600">Psychologist</p>
+          <p class="mt-3">
+            Dr. Hayley chairs the monthly Multidisciplinary Team (MDT) meetings and fortnightly team consultations,
+            providing expert guidance on therapeutic approaches, trauma-informed care, and child development. Her
+            leadership ensures that care plans are evidence-based, tailored, and responsive to the needs of each
+            young person.
+          </p>
+        </article>
+
+        <!-- Wikus -->
+        <article class="rounded-2xl border p-6">
+          <h3 class="text-lg font-semibold">Wikus Cookney</h3>
+          <p class="mt-1 text-sm text-slate-600">Registered Manager</p>
+          <p class="mt-3">
+            Wikus has over 20 years’ experience in senior management across multiple sectors. As Registered Manager,
+            he ensures operational excellence, staff development, and the embedding of relational, trauma-informed
+            care across all homes.
+          </p>
+        </article>
       </div>
     </div>
 
-    <div class="mt-8 rounded-xl bg-[#eef5f4] p-6">
-      <h2 class="text-lg font-semibold">Want to work with us?</h2>
-      <p class="mt-2">
-        If you’d like to be notified when roles open, please send a short introduction via our contact page.
+    <!-- Residential team -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Our Residential Team</h2>
+      <p class="mt-3 max-w-3xl">
+        Our Residential Support Team is at the heart of daily life in the home. They provide the structure, warmth,
+        and relational consistency that help children feel secure.
       </p>
-      <a href="/contact" class="mt-4 inline-block px-5 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]">
+      <p class="mt-3 max-w-3xl">
+        Each team member is trained in:
+      </p>
+      <ul class="mt-3 list-disc pl-6 space-y-2 max-w-3xl">
+        <li>Trauma-informed and attachment-aware practice</li>
+        <li>PACE and the House Model of Parenting</li>
+        <li>DBT and CBT-informed strategies</li>
+        <li>Safeguarding and positive behaviour support</li>
+        <li>Reflective supervision and ongoing professional development</li>
+      </ul>
+      <p class="mt-3 max-w-3xl">
+        Together, we create a calm, nurturing environment where routines, empathy, and meaningful moments help children thrive.
+      </p>
+    </div>
+
+    <!-- Clinical & Therapeutic Support -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Clinical &amp; Therapeutic Support</h2>
+      <p class="mt-3 max-w-3xl">
+        We work closely with The Aspen Clinic and have a dedicated psychologist (Dr. Hayley Knagg), CBT-registered
+        therapist (Siobhan Barfoot), and mental health nurse (Richard Barfoot) within Inguz Care to ensure every
+        young person receives the right support at the right time.
+      </p>
+      <p class="mt-3 max-w-3xl">
+        This includes:
+      </p>
+      <ul class="mt-3 list-disc pl-6 space-y-2 max-w-3xl">
+        <li>Regular clinical oversight and consultation for staff</li>
+        <li>Access to psychological assessment, CBT therapy, and mental health support tailored to each child</li>
+        <li>
+          Integration of therapeutic thinking into everyday care — helping staff reflect, respond, and grow alongside
+          the children they support
+        </li>
+      </ul>
+      <p class="mt-3 max-w-3xl">
+        Our multidisciplinary approach ensures that children’s emotional, physical, and social needs are met
+        holistically, with seamless support between the home and clinical teams.
+      </p>
+    </div>
+
+    <!-- Working with us -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">Working with Us</h2>
+      <p class="mt-3 max-w-3xl">
+        If you’re passionate about making a difference and believe in care that is relational, reflective, and rooted
+        in kindness, we’d love to hear from you. We look for people who are patient, resilient, and curious — those
+        who can stay calm under pressure, celebrate progress, and bring a sense of hope to everyday moments.
+      </p>
+      <p class="mt-3 max-w-3xl">
+        If you’d like to be notified when roles open, please send a short introduction via our Contact page.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 rounded-xl bg-[#eef5f4] p-6">
+      <h2 class="text-lg font-semibold">Get in Touch</h2>
+      <p class="mt-2 max-w-3xl">
+        To find out more about working with us, or to learn more about our team, please get in touch:
+      </p>
+      <p class="mt-3 max-w-3xl">
+        <span class="font-medium">Email:</span>
+        <a href="mailto:contact@inguzcare.co.uk" class="underline ml-1">contact@inguzcare.co.uk</a> <br />
+        <span class="font-medium">Phone:</span>
+        <a href="tel:01619005856" class="underline ml-1">0161 900 5856</a>
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-5 py-3 rounded-lg bg-[#5f7c7b] text-white font-semibold hover:bg-[#3d5756]"
+      >
         Contact us
       </a>
     </div>
