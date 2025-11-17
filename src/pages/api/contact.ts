@@ -1,7 +1,6 @@
 export const prerender = false;
 
 import type { APIRoute } from 'astro';
-import { Resend } from 'resend';
 
 export const POST: APIRoute = async ({ request, locals }) => {
   // Get the API key from Cloudflare (production) or from import.meta.env (local dev)
@@ -17,12 +16,10 @@ export const POST: APIRoute = async ({ request, locals }) => {
     return new Response('Server error', { status: 500 });
   }
 
-  const resend = new Resend(apiKey);
-
   try {
     const formData = await request.formData();
 
-    // Honeypot field – if filled, probably a bot
+    // Honeypot – if filled, probably a bot
     const company = formData.get('company');
     if (typeof company === 'string' && company.trim() !== '') {
       return new Response(null, { status: 200 });
@@ -37,25 +34,36 @@ export const POST: APIRoute = async ({ request, locals }) => {
       return new Response('Missing required fields', { status: 400 });
     }
 
-    const { error } = await resend.emails.send({
-      from: 'Inguz Care <no-reply@inguzcare.co.uk>',
-      to: ['contact@inguzcare.co.uk'],
-      subject: 'New website enquiry',
-      replyTo: email,
-      text: [
-        'New enquiry from the website:',
-        '',
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Phone: ${phone || 'Not provided'}`,
-        '',
-        'Message:',
-        message,
-      ].join('\n'),
+    const textBody = [
+      'New enquiry from the website:',
+      '',
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone || 'Not provided'}`,
+      '',
+      'Message:',
+      message,
+    ].join('\n');
+
+    // Call Resend's HTTP API directly
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Inguz Care <no-reply@inguzcare.co.uk>',
+        to: ['contact@inguzcare.co.uk'],
+        subject: 'New website enquiry',
+        reply_to: email,
+        text: textBody,
+      }),
     });
 
-    if (error) {
-      console.error('Resend error:', error);
+    if (!res.ok) {
+      const body = await res.text();
+      console.error('Resend error response:', res.status, body);
       return new Response('Error sending email', { status: 500 });
     }
 
