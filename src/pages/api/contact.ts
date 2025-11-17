@@ -1,25 +1,27 @@
 export const prerender = false;
 
-import type { APIRoute } from 'astro';
+import type { APIRoute } from "astro";
 
 export const POST: APIRoute = async ({ request, locals }) => {
-  // Get the API key from Cloudflare (production) or from import.meta.env (local dev)
+  // Get the API key from Cloudflare (production) or from .env (local dev)
   const apiKey =
-    // Cloudflare Pages: env available on locals.runtime.env
-    // @ts-ignore - runtime is injected by the Cloudflare adapter
+    // Cloudflare Pages: env vars are exposed on locals.runtime.env
+    // @ts-ignore - "runtime" is injected by the Cloudflare adapter at runtime
     locals?.runtime?.env?.RESEND_API_KEY ??
-    // Fallback for local development
     import.meta.env.RESEND_API_KEY;
 
   if (!apiKey) {
     console.error("RESEND_API_KEY is missing");
-    return new Response("Server error: missing API key", { status: 500 });
+    return new Response(
+      "Something went wrong. Please try again later.",
+      { status: 500 }
+    );
   }
 
   try {
     const formData = await request.formData();
 
-    // Honeypot – if filled, probably a bot
+    // Honeypot – if this is filled, it's probably a bot
     const company = formData.get("company");
     if (typeof company === "string" && company.trim() !== "") {
       return new Response(null, { status: 200 });
@@ -31,7 +33,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     const message = String(formData.get("message") ?? "").trim();
 
     if (!name || !email || !message) {
-      return new Response("Missing required fields", { status: 400 });
+      return new Response("Missing required fields.", { status: 400 });
     }
 
     const textBody = [
@@ -64,14 +66,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
     if (!res.ok) {
       const body = await res.text();
       console.error("Resend error response:", res.status, body);
-
-      // 🔴 TEMPORARY: show full error from Resend in the browser
       return new Response(
-        `Resend error (${res.status}):\n\n${body}`,
-        {
-          status: 500,
-          headers: { "Content-Type": "text/plain" },
-        }
+        "Something went wrong sending your message. Please try again later.",
+        { status: 500 }
       );
     }
 
@@ -80,10 +77,10 @@ export const POST: APIRoute = async ({ request, locals }) => {
       status: 302,
       headers: { Location: "/thanks" },
     });
-  } catch (err: any) {
-    console.error("Server error:", err);
+  } catch (err) {
+    console.error("Contact form server error:", err);
     return new Response(
-      `Server error:\n\n${String(err?.message ?? err)}`,
+      "Something went wrong. Please try again later.",
       { status: 500 }
     );
   }
