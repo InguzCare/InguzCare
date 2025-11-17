@@ -9,10 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.10",
     "@astrojs/sitemap": "^3.4.2",
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/vite": "^4.1.11",
-    "astro": "^5.12.9"
+    "astro": "^5.12.9",
+    "resend": "^6.4.2"
   },
   "devDependencies": {
     "autoprefixer": "10.4",
